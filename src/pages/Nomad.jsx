@@ -31,7 +31,7 @@ export function Nomad({ match, history, ...props }) {
   return (
     <div className="app-container">
       <NomadHeader user={user} logout={logout} history={history} />
-      {window.innerWidth > 700 && <LeftMenu user={user} />}
+      {window.innerWidth > 700 && <LeftMenu user={user}  />}
       <Feed user={user} />
       <LocationPreview location={user.currentLocation.name} />
     </div>

@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import { HeaderSearch } from './HeaderSearch.jsx'
 import { useDispatch } from 'react-redux';
-import {HeaderMenu} from './HeaderMenu.jsx';
+import HeaderMenu from './HeaderMenu.jsx';
 import HeaderMobileMenu from './HeaderMobileMenu.jsx';
 
 export function NomadHeader({ user, logout,history }) {
@@ -20,8 +20,7 @@ export function NomadHeader({ user, logout,history }) {
             </div>
             <div className='nav-icons-container'>
             {window.innerWidth < 700 && <HeaderMobileMenu user={user}/>}
-                <HeaderMenu user={user} logout={logout} history={history}/>
-                
+            {window.innerWidth > 700 &&<HeaderMenu user={user} logout={logout}/>}
             </div>
         </div>
     )

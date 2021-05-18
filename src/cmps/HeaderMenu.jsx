@@ -4,14 +4,16 @@ import ArrowForwardIosOutlinedIcon from '@material-ui/icons/ArrowForwardIosOutli
 import SettingsOutlinedIcon from '@material-ui/icons/SettingsOutlined';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import { useDispatch } from 'react-redux';
+import { withRouter } from 'react-router';
 
-export function HeaderMenu({ user, logout, history }) {
+ function HeaderMenu({ user, logout, history }) {
 
     const [isMenuOpen, setIsMenuOpen] = useState(false)
     const dispatch = useDispatch()
 
-    const onLogOut = () => {
-        dispatch(logout()), history.push('/login')
+    const onLogOut = async () => {
+        await dispatch(logout())
+         history.push('/login')
     }
 
     return (
@@ -20,7 +22,7 @@ export function HeaderMenu({ user, logout, history }) {
 
             {isMenuOpen && <div className="header-menu">
                 <div className='header-menu-icons-container'>
-                    <div className='profile-container'>
+                    <div className='profile-container' onClick={()=> history.push(`/profile/${user._id}`)}>
                         <img className="profile-img" src={user.profileImg} alt="" />
                         <span> {user.firstName} {user.lastName} </span>
                     </div>
@@ -49,3 +51,6 @@ export function HeaderMenu({ user, logout, history }) {
 
     )
 }
+
+
+export default withRouter(HeaderMenu)
