@@ -1,0 +1,170 @@
+.nomad-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10000;
+    // display: grid;
+    // align-items: center;
+    // justify-items: center;
+    // grid-template-columns: 1fr 2fr 1fr;
+    height: 60px;
+    margin-bottom: 20px;
+    background-color: #bdbdbdf1;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    .left-nav {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        margin-left: 15px;
+        height: 40px;
+        .svg-container {
+            // display: flex;
+            color: $main-bgc;
+            margin-right: 10px;
+            .logo {
+                width: 40px;
+                height: 40px;
+                margin-left: 15px;
+                margin-right: 5px;
+                clip-path: circle();
+            }
+        }
+        .search-container {
+            height: 80%;
+            // align-self: flex-end;
+            position: relative;
+            .input-holder {
+                height: 100%;
+                input {
+                    background-color: #f0f2f5;
+                    color: $header;
+                    width: 250px;
+                    border: 0;
+                    padding: 0 10px;
+                    height: 100%;
+                    font-size: 1rem;
+                    outline: none;
+                    &::-webkit-input-placeholder {
+                        color: $header;
+                    }
+                }
+                .open {
+                    border-radius: 10px 10px 0 0;
+                }
+                .close {
+                    border-radius: 10px;
+                }
+            }
+            .results-container {
+                position: absolute;
+                background-color: #f0f2f5;
+                z-index: 22;
+                width: 100%;
+                max-height: 250px;
+                overflow-y: overlay;
+                border-radius: 0px 0px 10px 10px;
+                ul {
+                    padding: 0px 10px;
+                    margin: 10px 0px;
+                    list-style: none;
+                }
+            }
+        }
+    }
+    .MuiSvgIcon-root {
+        color: $header;
+        cursor: pointer;
+        // transform: rotate(180deg);
+        font-size: 2.5rem;
+    }
+    .nav-icons-container {
+        width: 100%;
+        display: flex;
+        margin-left: 10px;
+        gap: 10px;
+        justify-content: flex-end;
+        .header-menu-container {
+            list-style: none;
+            display: flex;
+            color: white;
+            justify-content: flex-end;
+            margin-right: 20px;
+            align-items: center;
+            position: relative;
+            z-index: 3;
+            .header-menu-button {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 40px;
+                height: 40px;
+                background: white;
+                clip-path: circle();
+            }
+            .header-menu {
+                padding: 10px;
+                position: absolute;
+                margin-top: 10px;
+                width: 300px;
+                height: auto;
+                background: rgb(255, 255, 255);
+                box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+                top: 50px;
+                border-radius: 16px;
+                .header-menu-icons-container {
+                    list-style: none;
+                    margin-top: 5px;
+                    color: #5e6c84;
+          
+                    .profile-container {
+                        display: flex;
+                        gap: 10px;
+                        align-items: center;
+                        cursor: pointer;
+
+                    }
+                    .line {
+                        margin: auto;
+                        margin-top: 15px;
+                        margin-bottom: 15px;
+                        width: 90%;
+                        border-bottom: 1px solid $header;
+
+                    }
+                    .header-menu-icon-circle{
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        cursor: pointer;
+                        .icon-and-name{
+                            margin-bottom: 10px;
+                            display: flex;
+                            gap: 5px;
+                            align-items: center;
+                            .circle{
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                padding: 5px;
+                                width: 50px;
+                                width: 50px;
+                                clip-path: circle();
+                                background: $header;
+                                .MuiSvgIcon-root{
+                                    font-size: 1.8rem;
+                                    color: black;
+                                }
+                            }
+                        }
+
+                            .MuiSvgIcon-root{
+                                font-size: 1.2rem;
+                            }
+                    }
+                }
+            }
+        }
+    }
+}

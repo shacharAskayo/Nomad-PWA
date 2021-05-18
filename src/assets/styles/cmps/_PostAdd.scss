@@ -1,0 +1,102 @@
+.post-add-container {
+    width: 100%;
+    height: fit-content;
+    display: grid;
+    border-bottom: 1px solid rgba(167, 167, 167, 0.5);
+    padding-bottom: 80px;
+    text-transform: capitalize;
+
+    .user-details {
+        display: flex;
+        align-items: baseline;
+        margin: 40px;
+        gap: 6px;
+    }
+    .input-and-imgs {
+        align-self: end;
+        justify-self: center;
+        display: flex;
+        // flex-direction: column;
+        form {
+            align-items: center;
+            display: flex;
+            // margin-right: 20px;
+            input {
+                margin-right: 20px;
+                background-color: inherit;
+                border: 0;
+                border-bottom: 1px solid rgba(110 110 110 / 65%);
+                width: 250px;
+                &:focus {
+                    outline: none;
+                }
+            }
+
+            button {
+                padding: 7px 10px;
+                border-radius: 3px;
+            }
+        }
+        .imgs-preview-container {
+            width: 200px;
+            height: 58px;
+            overflow: hidden;
+            display: flex;
+            overflow-x: scroll;
+            margin-left: 20px;
+            img {
+                margin-left: 20px;
+                width: 45px;
+                height: 45px;
+                object-fit: contain;
+            }
+            .gif {
+                opacity: 0.1;
+            }
+        }
+
+        .imgs-preview-container::-webkit-scrollbar {
+            width: 8px;
+            height: 4px;
+            position: absolute;
+            z-index: 0;
+        }
+        /* Track */
+        .imgs-preview-container::-webkit-scrollbar-track {
+            background: rgba(9, 30, 66, 0.08);
+            border-radius: 8px;
+        }
+        /* Handle */
+        .imgs-preview-container::-webkit-scrollbar-thumb {
+            background: rgba(190, 190, 189, 0.788);
+            border-radius: 8px;
+            // border
+        }
+    }
+    .moment-add-container {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        label{
+            position: absolute;
+            left: 0;
+        }
+        .moment-add-preview {
+            position: relative;
+            img {
+                width: 180px;
+                height: 300px;
+                border-radius: 6px;
+                object-fit: cover;
+            }
+            button{
+                position: absolute;
+                bottom: -30px;
+                right: -5px;
+            }
+        }
+    }
+}
+.img-input {
+    display: none;
+}

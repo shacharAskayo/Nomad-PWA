@@ -1,0 +1,32 @@
+.feed-container {
+    display: grid;
+    height: inherit;
+}
+
+.app-container {
+    // display: grid;
+    margin-top: 70px;
+    display: flex;
+    justify-content: center;
+    // grid-template-columns: 1fr 2fr 1fr;
+}
+@media screen and (max-width: 450px) {
+    .app-container {
+        display: block;
+    }
+}
+.loader {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    width: 18%;
+}
+
+
+//     .right{
+//         margin-top: 50px;
+//         position: fixed;
+//         right: 50px;
+//     }
+// }

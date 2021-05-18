@@ -1,0 +1,60 @@
+// // Setup
+@import "setup/variables";
+@import "setup/functions";
+@import "setup/mixins";
+@import "setup/typography";
+
+// //views:
+// // Basics
+@import "basics/helpers";
+@import "basics/layout";
+@import "basics/base";
+@import "basics/forms";
+@import "cmps/Posts";
+@import "cmps/PostAdd";
+@import "cmps/Feed";
+@import "cmps/NomadHeader";
+@import "cmps/Comments";
+@import "cmps/LocationPreview";
+// @import "cmps/Globus";
+@import "cmps/Menu";
+@import "cmps/LeftMenu";
+
+
+// //Pages
+@import "pages/Nomad";
+@import "pages/profile";
+
+
+body{
+    height: 200px;
+background-color: rgb(240, 242, 245);
+    
+
+}
+
+.profile-img{
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+
+
+ul{
+    margin: 0;
+    padding: 0;
+    
+}
+
+li{
+    margin: 0;
+    padding: 0;
+    
+}
+
+.profile-img{
+    width: 40px;
+    height: 40px;
+    clip-path: circle();
+    object-fit: cover;
+}

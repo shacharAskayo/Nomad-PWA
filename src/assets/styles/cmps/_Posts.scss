@@ -1,0 +1,95 @@
+.posts-container {
+    justify-self: center !important;
+    // max-width: 600px;
+    width: inherit;
+
+    .post-preview {
+        height: fit-content;
+        display: grid;
+        grid-template-rows: 50px fit-content(30%) 50px;
+        position: relative;
+        background-color: #fcfcfc;
+        border-radius: 16px;
+        padding: 20px;
+        padding-bottom: 10px;
+        margin-bottom: 50px;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+        // box-shadow: 0px 1px 20px 15px #fcfcfc;
+        // border-radius: 30px;
+
+        &:first-of-type {
+            margin-top: 50px;
+        }
+        .user-details {
+            display: flex;
+            // margin: 10px;
+            img {
+                border-radius: 50%;
+                // border: 1px solid black;
+                width: 40px;
+                height: 40px;
+                background-color: aliceblue;
+                margin-right: 10px;
+            }
+            .date {
+                margin-left: 10px;
+                font-size: 13px;
+                font-weight: 600;
+                letter-spacing: 1px;
+            }
+            span {
+                text-transform: capitalize;
+                font-size: 1rem;
+            }
+        }
+        .post-details {
+            margin: 30px 10px;
+            margin-left: 50px;
+            h2 {
+                margin-bottom: 10px;
+            }
+            .imgs-container {
+                display: flex;
+                flex-wrap: wrap;
+
+                margin-top: 15px;
+                gap: 20px;
+                img {
+                    object-fit: contain;
+                    max-width: 240px;
+                }
+            }
+            input {
+                font-size: 24px;
+                font-weight: 700;
+                outline: none;
+                border: none;
+                background: inherit;
+                color: #5e6c84;
+            }
+        }
+        footer {
+            width: 100%;
+            border-top: 1px solid rgba(206, 206, 206, 0.952);
+            padding-top: 10px;
+            display: flex;
+            span:first-of-type {
+                margin: 0 10px;
+            }
+            .comments-like-container {
+                margin-right: 20px;
+
+                .like {
+                    color: $header;
+                }
+                span {
+                    color: #5e6c84;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+    .post-preview.comment {
+        display: block;
+    }
+}

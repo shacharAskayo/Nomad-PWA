@@ -1,0 +1,216 @@
+{
+    "users": [
+        {
+            "_id": "u101",
+            "firstName": "shachar",
+            "email": "askayo122@gmail.com",
+            "lastName": "askayo",
+            "nickName": "jasko",
+            "password": "2212",
+            "profileImg": "https://res.cloudinary.com/askayo/image/upload/v1617269360/j7k1jeoasuwtwgqvqgu7.jpg",
+            "createdAt": 0,
+            "currentLocation": {
+                "name": "japan"
+            },
+            "myLocations": [
+                {
+                    "id": "",
+                    "name": "",
+                    "lat": "",
+                    "lang": "",
+                    "imgs": [
+                        {
+                            "id": "",
+                            "src": "",
+                            "createdAt": 0
+                        }
+                    ],
+                    "thoughts": [
+                        {
+                            "id": "",
+                            "txt": "",
+                            "createdAt": 0
+                        }
+                    ]
+                }
+            ],
+            "following": [
+                {
+                    "_id": "u102",
+                    "nickName": "neo",
+                    "profileImg": "https://res.cloudinary.com/askayo/image/upload/v1617269043/ls6spmvnvrte7phphypy.jpg"
+                }
+            ],
+            "followers": [
+                {
+                    "_id": "u102",
+                    "nickName": "neo",
+                    "profileImg": "https://res.cloudinary.com/askayo/image/upload/v1617269043/ls6spmvnvrte7phphypy.jpg"
+                }
+            ],
+            "posts": [
+                {
+                    "id": "u101p1",
+                    "createdBy":{
+                        "_id":"u101",
+                        "nickName":"jasko",
+                        "profileImg":"https://res.cloudinary.com/askayo/image/upload/v1617269360/j7k1jeoasuwtwgqvqgu7.jpg"
+                    },
+                    "imgs": [
+                        "https://res.cloudinary.com/askayo/image/upload/v1617271058/zxuiejkwn9vqty3zgsnk.png",
+                        "https://res.cloudinary.com/askayo/image/upload/v1617271052/j7zbaeglniok4famsqds.png"
+                    ],
+                    "txt": "shachar first post",
+                    "createdAt": 0,
+                    "postLikes": [
+                        {
+                            "_id": "u102",
+                            "nickName": "neo",
+                            "createdAt": 0
+                        }
+                    ],
+                    "postComments": [
+                        {
+                            "createdBy": {
+                                "_id": "u102",
+                                "nickName": "neo",
+                                "profileImg": "https://res.cloudinary.com/askayo/image/upload/v1617269043/ls6spmvnvrte7phphypy.jpg"
+                            },
+                            "txt": "cool photos",
+                            "createdAt": 0,
+                            "commentsLikes": [
+                                {
+                                    " _id": "",
+                                    "nickName": "",
+                                    "createdAt": 0
+                                }
+                            ]
+                        },
+                        {
+                            "createdBy": {
+                                "_id": "u101",
+                                "nickName": "jasko",
+                                "profileImg": "https://res.cloudinary.com/askayo/image/upload/v1617269360/j7k1jeoasuwtwgqvqgu7.jpg"
+                            },
+                            "txt": "Thanks Bro !",
+                            "createdAt": 0,
+                            "commentsLikes": [
+                                {
+                                    " _id": "",
+                                    "nickName": "",
+                                    "createdAt": 0
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "moments": [
+                {
+                    "createdBy": {
+                        "_id": "u101",
+                        "nickName": "jasko",
+                        "profileImg": "https://res.cloudinary.com/askayo/image/upload/v1617269360/j7k1jeoasuwtwgqvqgu7.jpg"
+                    },
+                    "id": "sfscccxxx2131",
+                    "img": "https://www.godominicanrepublic.com/wp-content/uploads/2019/11/coco-bongo-last-party-of-the-year.jpg",
+                    "createdAt": 0
+                }
+            ]
+        },
+        {
+            "_id": "u102",
+            "firstName": "puki",
+            "email": "puki122@gmail.com",
+            "lastName": "meiri",
+            "nickName": "neo",
+            "password": "2212",
+            "profileImg": "https://res.cloudinary.com/askayo/image/upload/v1617269043/ls6spmvnvrte7phphypy.jpg",
+            "createdAt": 0,
+            "currentLocation": {
+                "name": "france"
+            },
+            "myLocations": [
+                {
+                    "id": "",
+                    "name": "",
+                    "lat": "",
+                    "lang": "",
+                    "imgs": [
+                        {
+                            "id": "",
+                            "src": "",
+                            "createdAt": 0
+                        }
+                    ],
+                    "thoughts": [
+                        {
+                            "id": "",
+                            "txt": "",
+                            "createdAt": 0
+                        }
+                    ]
+                }
+            ],
+            "following": [
+                {
+                    "_id": "u101",
+                    "nickName": "jasko",
+                    "profileImg": "https://res.cloudinary.com/askayo/image/upload/v1617269360/j7k1jeoasuwtwgqvqgu7.jpg"
+                }
+            ],
+            "followers": [
+                {
+                    "_id": "u101",
+                    "nickName": "jasko",
+                    "profileImg": "https://res.cloudinary.com/askayo/image/upload/v1617269360/j7k1jeoasuwtwgqvqgu7.jpg"
+                }
+            ],
+            "posts": [
+                {
+                    "id": "u102p2",
+                    "imgs": [],
+                    "txt": "neo first post",
+                    "createdAt": 0,
+                    "postLikes": [
+                        {
+                            "_id": "u101",
+                            "nickName": "jasko",
+                            "createdAt": 0
+                        }
+                    ],
+                    "postComments": [
+                       
+                    ],
+                    "createdBy": {
+                        "_id": "u102",
+                        "nickName": "neo",
+                        "profileImg": "https://res.cloudinary.com/askayo/image/upload/v1617269043/ls6spmvnvrte7phphypy.jpg"
+                    }
+                }
+            ],
+            "moments": [
+                {
+                    "createdBy": {
+                        "_id": "u102",
+                        "nickName": "neo",
+                        "profileImg": "https://res.cloudinary.com/askayo/image/upload/v1617269043/ls6spmvnvrte7phphypy.jpg"
+                    },
+                    "id": "asfasdasndmnn",
+                    "img": "http://res.cloudinary.com/askayo/image/upload/v1618844244/zgjkenaidepdidcpmx43.jpg",
+                    "createdAt": 0
+                },
+                {
+                    "createdBy": {
+                        "_id": "u102",
+                        "nickName": "neo",
+                        "profileImg": "https://res.cloudinary.com/askayo/image/upload/v1617269043/ls6spmvnvrte7phphypy.jpg"
+                    },
+                    "id": "",
+                    "img": "https://blogmedia.evbstatic.com/wp-content/uploads/wpmulti/sites/8/shutterstock_199419065.jpg",
+                    "createdAt": 0
+                }
+            ]
+        }
+    ]
+}
