@@ -137,8 +137,9 @@ function _SignUp(props) {
                                 autoComplete="current-password"
                             />
                         </Grid>
-                        <label htmlFor="img-icon">
+                        <label htmlFor="img-icon" style={{cursor:'pointer' , display:'flex', alignItems:'center'}}>
                             <PhotoLibraryIcon />
+                            <span> Set Profile Img</span>
                             <input style={{ display: 'none' }} className="img-input" type="file" id="img-icon" onChange={uploadImg} />
                         </label>
                         <Grid item xs={12}>

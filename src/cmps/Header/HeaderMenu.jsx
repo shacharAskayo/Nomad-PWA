@@ -35,9 +35,9 @@ import { withRouter } from 'react-router';
                         <ArrowForwardIosOutlinedIcon />
                     </div>
                     <div className='header-menu-icon-circle'>
-                        <div className='icon-and-name'>
+                        <div className='icon-and-name' onClick={onLogOut}>
                             <div className="circle"> <ExitToAppIcon /> </div>
-                            <span onClick={onLogOut}> log out</span>
+                            <span > log out</span>
                         </div>
                         <ArrowForwardIosOutlinedIcon />
                     </div>

@@ -3,13 +3,9 @@
     justify-content: space-between;
     align-items: center;
     z-index: 10000;
-    // display: grid;
-    // align-items: center;
-    // justify-items: center;
-    // grid-template-columns: 1fr 2fr 1fr;
     height: 60px;
     margin-bottom: 20px;
-    background-color: #bdbdbdf1;
+    // background-color: #bdbdbdf1;
     position: fixed;
     width: 100%;
     top: 0;
@@ -17,7 +13,7 @@
         width: 100%;
         display: flex;
         align-items: center;
-        margin-left: 15px;
+        // margin-left: 15px;
         height: 40px;
         .svg-container {
             // display: flex;
@@ -27,7 +23,7 @@
                 width: 40px;
                 height: 40px;
                 margin-left: 15px;
-                margin-right: 5px;
+                margin-right: 0px;
                 clip-path: circle();
             }
         }
@@ -38,10 +34,10 @@
             .input-holder {
                 height: 100%;
                 input {
-                    background-color: #f0f2f5;
+                    background-color: $main-bgc;
                     color: $header;
                     width: 250px;
-                    border: 0;
+                    border: 1px solid $header;
                     padding: 0 10px;
                     height: 100%;
                     font-size: 1rem;
@@ -155,11 +151,11 @@
                                 padding: 5px;
                                 width: 50px;
                                 width: 50px;
+                                background: $main-bgc;
                                 clip-path: circle();
-                                background: $header;
                                 .MuiSvgIcon-root{
                                     font-size: 1.8rem;
-                                    color: black;
+                                    color: $header;
                                 }
                             }
                         }
