@@ -1,5 +1,5 @@
 import { useState } from "react"
-import {userService} from '../services/userService.js'
+import {userService} from '../../services/userService.js'
 import { Link } from 'react-router-dom'
 
 

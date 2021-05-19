@@ -7,15 +7,18 @@ import { useDispatch } from "react-redux"
 export function ProfileHeader({ user, isFollowing, toggleFollow, isUser }) {
 
     const dispatch = useDispatch()
-
+    const [ImgLoading, setImgLoading] = useState(false)
 
     const uploadImg = async (ev) => {
         const copyUser = JSON.parse(JSON.stringify(user))
         const img = ev.target.files[0]
         const uploadedImg = await cloudinaryService.uploadImg(img)
-        if (uploadedImg.width > 1300) {
+        console.log(uploadedImg);
+        if (uploadedImg.width > 200) {
             copyUser.coverImg = uploadedImg.secure_url
+            setImgLoading(true)
             await dispatch(updateUser(copyUser))
+            setImgLoading(false)
         }
     }
 
@@ -31,6 +34,7 @@ export function ProfileHeader({ user, isFollowing, toggleFollow, isUser }) {
                         <button> set img</button>
                         <input className="img-input" type="file" id="img-icon" onChange={uploadImg} />
                     </label>}
+                    {ImgLoading && <span>loading</span>}
                 </div>
             </div>
             <div className="followers-moments-container">

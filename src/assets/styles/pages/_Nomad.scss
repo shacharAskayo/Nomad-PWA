@@ -10,7 +10,7 @@
     justify-content: center;
     // grid-template-columns: 1fr 2fr 1fr;
 }
-@media screen and (max-width: 450px) {
+@media (max-width: 800px) {
     .app-container {
         display: block;
     }

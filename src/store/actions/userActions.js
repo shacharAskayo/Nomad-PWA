@@ -49,7 +49,7 @@ export function updateUser(newUser) {
     return async dispatch => {
         try {
             const user = await userService.updateUser(newUser)
-            dispatch({ type: 'LOAD_USER', user })
+            dispatch({ type: 'UPDATE_USER', user })
         } catch (err) {
             console.log(err)
         }
@@ -60,7 +60,7 @@ export function onUserFollow(newUser,newSearchedUser) {
     return async dispatch => {
         try {
             const user = await userService.onFollow(newUser,newSearchedUser)
-            dispatch({ type: 'LOAD_USER', user })
+            dispatch({ type: 'UPDATE_USER', user })
         } catch (err) {
             console.log(err)
         }

@@ -71,7 +71,7 @@
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
     .globus-container {
         display: flex;
         justify-content: center;
@@ -82,6 +82,7 @@
         display: block;
         .moments-container {
             width: 100%;
+            max-width: none;
         }
     }
   
@@ -94,6 +95,7 @@
     .post-preview .menu-container .menu {
         left: -290px;
     }
+    
 
     .profile-page-container .header-container .profile-header {
         width: 100% !important;
@@ -107,6 +109,9 @@
     .profile-page-container .header-container .profile-header .followers-moments-container .followers-container {
         display: flex;
         flex-direction: column;
+        button{
+            width: fit-content;
+        }
     }
     .nomad-header .left-nav {
         margin-left: 0 !important;

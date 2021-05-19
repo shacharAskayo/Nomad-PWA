@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import MenuIcon from '@material-ui/icons/Menu';
-import LeftMenu from './LeftMenu';
+import LeftMenu from '../LeftHomeMenu';
 import { HeaderMenu } from './HeaderMenu';
 
 

@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-export function Menu({user,onMenuClicked}) {
+export function PostMenu({user,onMenuClicked}) {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
 
     return (

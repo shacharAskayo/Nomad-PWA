@@ -48,10 +48,7 @@ async function signup(userToAdd) {
 
 async function logout() {
     try {
-        // await httpService.post(baseUrl + '/logout')
         localStorage.removeItem('loggedUser')
-        // localStorage.removeItem('user')
-        // sessionStorage.removeItem('loggedUser')
     } catch (err) {
         console.log(err)
     }

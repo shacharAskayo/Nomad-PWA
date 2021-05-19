@@ -6,7 +6,7 @@ import { onLike, onComment, onDelete, onEdit } from '../store/actions/feedAction
 import { useEffect, useRef, useState } from 'react';
 import { Comments } from './Comments';
 import { Link } from 'react-router-dom'
-import { Menu } from './Menu';
+import { PostMenu } from './PostMenu';
 import { Input } from '@material-ui/core';
 
 export function Post({ post, ...props }) {
@@ -60,7 +60,7 @@ export function Post({ post, ...props }) {
 
     return (
         <div className="post-preview">
-            <Menu onMenuClicked={onMenuClicked} />
+            <PostMenu onMenuClicked={onMenuClicked} />
             <div className="user-details">
                 <Link to={`/profile/${post.createdBy._id}`}>
                     <img src={post.createdBy.profileImg} alt="" />
