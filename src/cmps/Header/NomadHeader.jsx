@@ -6,7 +6,6 @@ import HeaderMobileMenu from './HeaderMobileMenu.jsx';
 
 export function NomadHeader({ user, logout }) {
 
-
     return (
         <div className="nomad-header" >
             <div className="left-nav">

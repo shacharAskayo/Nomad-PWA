@@ -26,9 +26,11 @@ export function Nomad({ match, history, ...props }) {
     }
   }, [])
 
+
+  
   if (!user) return <img className='loader' src={loadingGif2} alt="" />
   return (
-    <div className="app-container">
+    <div className="app-container" onScroll={(ev)=>console.log(ev)}  >
       <NomadHeader user={user} logout={logout} history={history} />
       {window.innerWidth > 1000 && <LeftHomeMenu user={user} />}
       <Feed user={user} />

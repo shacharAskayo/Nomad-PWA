@@ -5,7 +5,6 @@
     z-index: 10000;
     height: 60px;
     margin-bottom: 20px;
-    // background-color: #bdbdbdf1;
     position: fixed;
     width: 100%;
     top: 0;
@@ -82,7 +81,7 @@
         gap: 10px;
         justify-content: flex-end;
         align-items: baseline;
-        .header-mobile-menu-container{
+        .header-mobile-menu-container {
             margin-right: 20px;
             display: flex;
         }
@@ -118,13 +117,12 @@
                     list-style: none;
                     margin-top: 5px;
                     color: #5e6c84;
-          
+
                     .profile-container {
                         display: flex;
                         gap: 10px;
                         align-items: center;
                         cursor: pointer;
-
                     }
                     .line {
                         margin: auto;
@@ -132,19 +130,18 @@
                         margin-bottom: 15px;
                         width: 90%;
                         border-bottom: 1px solid $header;
-
                     }
-                    .header-menu-icon-circle{
+                    .header-menu-icon-circle {
                         display: flex;
                         justify-content: space-between;
                         align-items: center;
                         cursor: pointer;
-                        .icon-and-name{
+                        .icon-and-name {
                             margin-bottom: 10px;
                             display: flex;
                             gap: 5px;
                             align-items: center;
-                            .circle{
+                            .circle {
                                 display: flex;
                                 justify-content: center;
                                 align-items: center;
@@ -153,19 +150,26 @@
                                 width: 50px;
                                 background: $main-bgc;
                                 clip-path: circle();
-                                .MuiSvgIcon-root{
+                                .MuiSvgIcon-root {
                                     font-size: 1.8rem;
                                     color: $header;
                                 }
                             }
                         }
 
-                            .MuiSvgIcon-root{
-                                font-size: 1.2rem;
-                            }
+                        .MuiSvgIcon-root {
+                            font-size: 1.2rem;
+                        }
                     }
                 }
             }
         }
+    }
+}
+
+@media (max-width: 600px) {
+    .nomad-header {
+    background-color: rgb(196, 196, 196) !important;
+
     }
 }

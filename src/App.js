@@ -12,7 +12,7 @@ import { login } from './store/actions/userActions'
 
 
 // export default
- function App({ history }) {
+function App({ history }) {
 
   const dispatch = useDispatch()
 
@@ -31,8 +31,13 @@ import { login } from './store/actions/userActions'
   //   }
   // }, [])
 
+
+  const onScroll = (ev) => {
+    console.log('ev', ev);
+  }
+
   return (
-    <div className="app" >
+    <div className="app" onScroll={onScroll} >
       <Router>
         <Switch>
           <Route path="/profile/:id" component={Profile} />
@@ -48,3 +53,20 @@ import { login } from './store/actions/userActions'
 }
 
 export default withRouter(App)
+
+
+
+
+
+// function checkWords(word) {
+//   const variables = ['users', 'loggedUser', 'isOpen', 'feed']
+//   var variablesMap = {}
+//   variables.map(variable => {
+//     var counter = 0
+//     for (var i = 0; i <= variable.length; i++) if (variable.charAt(i) === word.charAt(i)) counter++
+//     variablesMap[variable] = counter
+//   })
+//   return Object.keys(variablesMap).reduce((a, b) => variablesMap[a] > variablesMap[b] ? a : b);
+// }
+// const foundedWord = checkWords('isopen')
+// console.log(foundedWord);
