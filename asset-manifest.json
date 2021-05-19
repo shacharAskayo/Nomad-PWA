@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/Nomad-PWA/static/css/main.e6d66d01.chunk.css",
-    "main.js": "/Nomad-PWA/static/js/main.628c1e8c.chunk.js",
-    "main.js.map": "/Nomad-PWA/static/js/main.628c1e8c.chunk.js.map",
+    "main.css": "/Nomad-PWA/static/css/main.d25f0df5.chunk.css",
+    "main.js": "/Nomad-PWA/static/js/main.e76a3998.chunk.js",
+    "main.js.map": "/Nomad-PWA/static/js/main.e76a3998.chunk.js.map",
     "runtime-main.js": "/Nomad-PWA/static/js/runtime-main.50827842.js",
     "runtime-main.js.map": "/Nomad-PWA/static/js/runtime-main.50827842.js.map",
     "static/js/2.ef5b5f81.chunk.js": "/Nomad-PWA/static/js/2.ef5b5f81.chunk.js",
@@ -12,7 +12,7 @@
     "index.html": "/Nomad-PWA/index.html",
     "service-worker.js": "/Nomad-PWA/service-worker.js",
     "service-worker.js.map": "/Nomad-PWA/service-worker.js.map",
-    "static/css/main.e6d66d01.chunk.css.map": "/Nomad-PWA/static/css/main.e6d66d01.chunk.css.map",
+    "static/css/main.d25f0df5.chunk.css.map": "/Nomad-PWA/static/css/main.d25f0df5.chunk.css.map",
     "static/js/2.ef5b5f81.chunk.js.LICENSE.txt": "/Nomad-PWA/static/js/2.ef5b5f81.chunk.js.LICENSE.txt",
     "static/media/loading.c0abcd6f.gif": "/Nomad-PWA/static/media/loading.c0abcd6f.gif",
     "static/media/page-loader.4f415935.gif": "/Nomad-PWA/static/media/page-loader.4f415935.gif"
@@ -20,7 +20,7 @@
   "entrypoints": [
     "static/js/runtime-main.50827842.js",
     "static/js/2.ef5b5f81.chunk.js",
-    "static/css/main.e6d66d01.chunk.css",
-    "static/js/main.628c1e8c.chunk.js"
+    "static/css/main.d25f0df5.chunk.css",
+    "static/js/main.e76a3998.chunk.js"
   ]
 }
