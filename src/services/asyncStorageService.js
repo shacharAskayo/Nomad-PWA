@@ -13,7 +13,7 @@ export const storageService = {
     getById,
     updateUserLikes,
     updateUserComments,
-
+    getByNickName
 }
 
 
@@ -91,6 +91,17 @@ async function put(entityType, updatedEntity) {
     return updatedEntity
 }
 
+
+async function getByNickName(nickName) {
+    const users = await query('user')
+    console.log(users);
+    console.log(nickName);
+    const foundedUser = users.find(user => user.nickName === nickName)
+    return foundedUser
+}
+
+
+
 function remove(entityType, entityId) {
     return query(entityType)
         .then(entities => {
@@ -104,6 +115,8 @@ function remove(entityType, entityId) {
 function _save(entityType, entities) {
     localStorage.setItem(entityType, JSON.stringify(entities))
 }
+
+
 
 
 

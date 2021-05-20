@@ -3,6 +3,7 @@ import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import { HeaderSearch } from './HeaderSearch.jsx'
 import HeaderMenu from './HeaderMenu.jsx';
 import HeaderMobileMenu from './HeaderMobileMenu.jsx';
+import Microphone from '../Microphone.jsx';
 
 export function NomadHeader({ user, logout }) {
 
@@ -15,8 +16,9 @@ export function NomadHeader({ user, logout }) {
                 <HeaderSearch user={user} />
             </div>
             <div className='nav-icons-container'>
-            {window.innerWidth < 800 && <HeaderMobileMenu user={user}/>}
-            {window.innerWidth > 800 &&<HeaderMenu user={user} logout={logout}/>}
+                <Microphone user={user} />
+                {window.innerWidth < 800 && <HeaderMobileMenu user={user} />}
+                {window.innerWidth > 800 && <HeaderMenu user={user} logout={logout} />}
             </div>
         </div>
     )

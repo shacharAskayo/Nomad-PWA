@@ -10,10 +10,7 @@ export default function HeaderMobileMenu({ user }) {
 
     useEffect(() => {
         if (isMenuOpen) window.addEventListener('scroll', onScroll)
-        else window.removeEventListener('scroll', onScroll)
-        return () => {
-            window.removeEventListener('scroll', onScroll)
-        }
+        return () => window.removeEventListener('scroll', onScroll)
     }, [isMenuOpen])
 
     const onScroll = (ev) => setIsMenuOpen(false)

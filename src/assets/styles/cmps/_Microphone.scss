@@ -1,0 +1,44 @@
+.microphone-container{
+    position: relative;
+    display: flex;
+    .post-preview.dummy{
+        position: absolute ;
+        top: 0 ;
+        left: -400px ;
+        width: 400px;
+    }
+
+    .microphone-sutggestion-container{
+        position: absolute;
+        left: -300px;
+        top: 40px;
+        background: rgb(196, 196, 196) ;
+        display: flex;
+        width: 300px;
+        flex-direction: column;
+        align-items: baseline;
+        padding: 30px;
+        font-size: 14px;
+        color: $main-bgc;
+        border-radius: 16px;
+    }
+}
+
+
+@media (max-width:500px){
+    .microphone-container{
+        position: unset;
+        .post-preview.dummy{
+            left: 0;
+            width: 100%;
+            top: 0;
+
+        }
+
+        .microphone-sutggestion-container{
+            width: 100%;
+            left: 0;
+            top: 50px;
+        }
+    }
+}

@@ -11,6 +11,7 @@ import loadingGif2 from '../assets/gifs/page-loader.gif'
 import LeftHomeMenu from "../cmps/LeftHomeMenu";
 
 
+
 // left
 
 
@@ -30,7 +31,7 @@ export function Nomad({ match, history, ...props }) {
   
   if (!user) return <img className='loader' src={loadingGif2} alt="" />
   return (
-    <div className="app-container" onScroll={(ev)=>console.log(ev)}  >
+    <div className="app-container"  >
       <NomadHeader user={user} logout={logout} history={history} />
       {window.innerWidth > 1000 && <LeftHomeMenu user={user} />}
       <Feed user={user} />
