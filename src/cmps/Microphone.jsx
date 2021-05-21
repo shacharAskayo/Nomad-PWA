@@ -8,6 +8,9 @@ import MicIcon from '@material-ui/icons/Mic';
 import MicNoneIcon from '@material-ui/icons/MicNone';
 import DummyPost from './DummyPost'
 import VoiceSuggestions from './VoiceSuggestions'
+import DeleteList from './DeleteList'
+
+const numberCommends = ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10']
 
 const Microphone = ({ history, user }) => {
 
@@ -19,10 +22,9 @@ const Microphone = ({ history, user }) => {
     const [isListen, setIsListen] = useState(false)
     const [message, setMessage] = useState('')
     const [isAddingPost, setIsAddingPost] = useState(false)
+    const [isDeletePost, setIsDeletePost] = useState(false)
 
     const handleVoiceActions = async (command, spokenPhrase, rate) => {
-        console.log('handleVOiceACtion Function  - transcript', transcript);
-        console.log('handleVOiceACtion Function  - command', command);
         if (command === 'go to profile') {
             const searchedProfile = spokenPhrase.slice(5, spokenPhrase.length - 7)
             const trimedSearchedProfile = searchedProfile.trim()
@@ -32,22 +34,39 @@ const Microphone = ({ history, user }) => {
                 if (foundedUser) history.push(`/profile/${foundedUser._id}`)
             }
         }
-        if (command === 'add new post' && !isAddingPost) {
+        if (command === 'add new post' && !isAddingPost && !isDeletePost) {
             console.log('add new post command');
             setIsListen(false)
             setIsAddingPost(true)
             resetTranscript()
         }
+        if (command === 'delete post' && !isAddingPost) {
+            setIsListen(false)
+            setIsDeletePost(true)
+            resetTranscript()
+        }
+    }
+    const handleNumbersRecognition = (command, spokenPhrase) => {
+        const number = getNumber(command)
+
     }
 
     const commands = [
         {
-            command: ['go to * profile', 'add new post', 'logout'],
+            command: ['go to * profile', 'add new post', 'logout', 'delete post'],
             callback: handleVoiceActions,
             isFuzzyMatch: true,
             fuzzyMatchingThreshold: 0.2,
             bestMatchOnly: true
         },
+        {
+            command: numberCommends,
+            callback: handleNumbersRecognition,
+            isFuzzyMatch: true,
+            fuzzyMatchingThreshold: 0.2,
+            bestMatchOnly: true
+        },
+
     ]
 
     const { transcript, resetTranscript } = useSpeechRecognition({ commands })
@@ -67,14 +86,51 @@ const Microphone = ({ history, user }) => {
     }
     const onStopListening = async () => {
         setIsListen(false)
+        setIsAddingPost(false)
+        setIsDeletePost(false)
         resetTranscript()
         await SpeechRecognition.stopListening()
     }
-
     const clearPostListeners = () => {
         setIsAddingPost(false)
         setIsListen(false)
         resetTranscript()
+    }
+    const getNumber = (number) => {
+        switch (number) {
+            case 'one':
+            case '1':
+                return 1
+            case 'two':
+            case '2':
+                return 2
+            case 'three':
+            case '3':
+                return 3
+            case 'four':
+            case '4':
+                return 4
+            case 'five':
+            case '5':
+                return 5
+            case 'six':
+            case '6':
+                return 6
+            case 'seven':
+            case '7':
+                return 7
+            case 'eight':
+            case '8':
+                return 8
+            case 'nine':
+            case '9':
+                return 9
+            case 'ten':
+            case '10':
+                return 10
+            default:
+                break;
+        }
     }
 
 
@@ -82,15 +138,14 @@ const Microphone = ({ history, user }) => {
 
     return (
         <div className='microphone-container'>
-            
-            {window.innerWidth>700 &&<span className='voice-demo'>
+
+            {window.innerWidth > 700 && <span className='voice-demo scroll'>
                 {transcript}
             </span>}
             {!isListen && <MicIcon onClick={onStartListening} />}
             {isListen && <MicNoneIcon onClick={onStopListening} />}
-            {/* <button onClick={resetTranscript}>Reset</button> */}
             {isAddingPost && <DummyPost voice={transcript} user={user} onPost={onAddNewPost} onDelete={onDeleteNewPost} />}
-
+            {isDeletePost && <DeleteList user={user} />}
             {isListen && !isAddingPost && <VoiceSuggestions transcript={transcript} />}
         </div>
     )
