@@ -146,7 +146,7 @@ const Microphone = ({ history, user }) => {
             {isListen && <MicNoneIcon onClick={onStopListening} />}
             {isAddingPost && <DummyPost voice={transcript} user={user} onPost={onAddNewPost} onDelete={onDeleteNewPost} />}
             {isDeletePost && <DeleteList user={user} />}
-            {isListen && !isAddingPost && <VoiceSuggestions transcript={transcript} />}
+            {isListen && !isAddingPost && !isDeletePost&& <VoiceSuggestions transcript={transcript} />}
         </div>
     )
 }

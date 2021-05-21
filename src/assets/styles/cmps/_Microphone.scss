@@ -38,14 +38,14 @@
             font-size: 1rem;
         }
     }
-    .delete-list{
+    .delete-list {
         max-height: 400px;
         overflow-y: scroll;
         position: absolute;
         top: 50px;
         right: 20px;
         width: 450px;
-        .post-preview{
+        .post-preview {
             width: 100%;
             margin-top: 0;
             margin-bottom: 10px;
@@ -102,6 +102,21 @@
         }
         .voice-demo {
             max-width: 100%;
+        }
+
+        .delete-list {
+            width: 100%;
+            right: 0;
+            max-height: 60vh;
+            height: 100vh;
+            background-color: $main-bgc;
+            h2 {
+                background-color: #fcfcfc;
+                margin: 0;
+                padding: 8px;
+                font-size: 1.2rem;
+                text-align: center;
+            }
         }
     }
 }
