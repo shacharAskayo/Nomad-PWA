@@ -5,6 +5,7 @@
     // grid-template-rows:repeat( auto-fit, minmax(250px, 1fr) );
     .moments-container {
         display: flex;
+        justify-content: center;
         gap: 12px;
         max-width: 600px;
         justify-self: center !important;

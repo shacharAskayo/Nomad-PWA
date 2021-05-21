@@ -7,6 +7,7 @@ import { addPost } from '../store/actions/feedAction'
 import MicIcon from '@material-ui/icons/Mic';
 import MicNoneIcon from '@material-ui/icons/MicNone';
 import DummyPost from './DummyPost'
+import VoiceSuggestions from './VoiceSuggestions'
 
 const Microphone = ({ history, user }) => {
 
@@ -20,8 +21,8 @@ const Microphone = ({ history, user }) => {
     const [isAddingPost, setIsAddingPost] = useState(false)
 
     const handleVoiceActions = async (command, spokenPhrase, rate) => {
-        console.log('handleVOiceACtion Function  - transcript',transcript);
-
+        console.log('handleVOiceACtion Function  - transcript', transcript);
+        console.log('handleVOiceACtion Function  - command', command);
         if (command === 'go to profile') {
             const searchedProfile = spokenPhrase.slice(5, spokenPhrase.length - 7)
             const trimedSearchedProfile = searchedProfile.trim()
@@ -52,7 +53,7 @@ const Microphone = ({ history, user }) => {
     const { transcript, resetTranscript } = useSpeechRecognition({ commands })
 
 
-    const onPost = () => {
+    const onAddNewPost = () => {
         const copyText = JSON.parse(JSON.stringify(transcript))
         dispatch(addPost(user, { txt: copyText, imgs: [] }))
         clearPostListeners()
@@ -60,37 +61,37 @@ const Microphone = ({ history, user }) => {
     const onDeleteNewPost = () => {
         clearPostListeners()
     }
-    const onStartListening=async ()=>{
+    const onStartListening = async () => {
         await SpeechRecognition.startListening()
         setIsListen(true)
     }
-    const onStopListening =async ()=>{
+    const onStopListening = async () => {
         setIsListen(false)
-        await SpeechRecognition.stopListening()
         resetTranscript()
+        await SpeechRecognition.stopListening()
     }
 
-    const clearPostListeners =()=>{
+    const clearPostListeners = () => {
         setIsAddingPost(false)
         setIsListen(false)
         resetTranscript()
-
     }
+
+
 
 
     return (
         <div className='microphone-container'>
-
-            {!isListen && <MicIcon onClick={ onStartListening }/>}
-            {isListen && <MicNoneIcon onClick={ onStopListening}/>}
+            
+            {window.innerWidth>700 &&<span className='voice-demo'>
+                {transcript}
+            </span>}
+            {!isListen && <MicIcon onClick={onStartListening} />}
+            {isListen && <MicNoneIcon onClick={onStopListening} />}
             {/* <button onClick={resetTranscript}>Reset</button> */}
-            {isAddingPost && <DummyPost voice={transcript} user={user} onPost={onPost} onDelete={onDeleteNewPost}/>}
-           {isListen && !isAddingPost && <div className='microphone-sutggestion-container'>
-               <span> try to say "add new Post"</span>
-               <span> try to say "go to my profile"</span>
-               <span> try to say "go to ~ 'your friend nickname' ~ profile"</span>
+            {isAddingPost && <DummyPost voice={transcript} user={user} onPost={onAddNewPost} onDelete={onDeleteNewPost} />}
 
-               </div>}
+            {isListen && !isAddingPost && <VoiceSuggestions transcript={transcript} />}
         </div>
     )
 }

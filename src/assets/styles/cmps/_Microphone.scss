@@ -1,44 +1,94 @@
-.microphone-container{
+.microphone-container {
     position: relative;
     display: flex;
-    .post-preview.dummy{
-        position: absolute ;
-        top: 0 ;
-        left: -400px ;
-        width: 400px;
+    align-items: center;
+
+    .voice-demo {
+        white-space: nowrap;
+        max-width: 343px;
+        overflow-x: scroll;
+    }
+    .post-preview.dummy {
+        position: absolute;
+        top: 0;
+        right: 10px;
+        width: 450px;
     }
 
-    .microphone-sutggestion-container{
+    .microphone-sutggestion-container {
         position: absolute;
-        left: -300px;
+        right: 10px;
         top: 40px;
-        background: rgb(196, 196, 196) ;
+        // background: rgb(196, 196, 196);
+        background: #fcfcfc;
         display: flex;
-        width: 300px;
+        width: max-content;
         flex-direction: column;
-        align-items: baseline;
+        align-items: center;
         padding: 30px;
-        font-size: 14px;
+        font-size: 0.8rem;
         color: $main-bgc;
         border-radius: 16px;
+        color: darken($color: $main-bgc, $amount: 20);
+        span:first-of-type {
+            color: darken($color: $main-bgc, $amount: 30);
+            text-transform: capitalize;
+            margin-top: -10px;
+            margin-bottom: 5px;
+            font-size: 1rem;
+        }
     }
 }
+.voice-demo::-webkit-scrollbar {
+    width: 8px;
+    height: 4px;
+    position: absolute;
+    z-index: 0;
+}
+/* Track */
+.voice-demo::-webkit-scrollbar-track {
+    background: rgba(9, 30, 66, 0.08);
+    border-radius: 8px;
+}
+/* Handle */
+.voice-demo::-webkit-scrollbar-thumb {
+    background: rgba(190, 190, 189, 0.788);
+    border-radius: 8px;
+    // border
+}
 
-
-@media (max-width:500px){
-    .microphone-container{
+@media (max-width: 500px) {
+    .microphone-container {
         position: unset;
-        .post-preview.dummy{
+        .post-preview.dummy {
             left: 0;
             width: 100%;
             top: 0;
-
+            background: rgb(196, 196, 196);
+            color: #5e6c84;
+            .comments-like-container {
+                span {
+                    color: #5e6c84;
+                }
+            }
         }
 
-        .microphone-sutggestion-container{
+        .microphone-sutggestion-container {
+            background: rgb(196, 196, 196);
             width: 100%;
             left: 0;
             top: 50px;
+            span {
+                color: darken($color: $main-bgc, $amount: 5);
+                font-size: 1rem;
+            }
+            span:nth-child(2) {
+                color: darken($color: $main-bgc, $amount: 0);
+                font-size: 1.3rem !important;
+            }
+        }
+        .voice-demo {
+            max-width: 100%;
         }
     }
 }

@@ -2,7 +2,7 @@ import React from 'react'
 import Moment from 'react-moment'
 import { PostMenu } from './PostMenu'
 
-export default function DummyPost({voice,user,onPost,onDelete}) {
+export default function DummyPost({ voice, user, onPost, onDelete }) {
     const time = new Date(Date.now())
     return (
         <div className="post-preview dummy">
@@ -18,7 +18,7 @@ export default function DummyPost({voice,user,onPost,onDelete}) {
             </div>
 
             <div className="post-details">
-                {!voice && <h3>Speak Into Post</h3>}
+                {!voice && <h3>Press again on the mic to start listen. and press again after for restart</h3>}
                 {voice && <h3>{voice}</h3>}
             </div>
 
@@ -26,7 +26,7 @@ export default function DummyPost({voice,user,onPost,onDelete}) {
                 <div className='comments-like-container'>
 
                     <span onClick={onPost} >  post</span>
-                    <span onClick={onDelete}> delete </span>
+                    <span onClick={onDelete}> cancel </span>
                 </div>
 
 
